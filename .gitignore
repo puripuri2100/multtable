@@ -1,0 +1,6 @@
+.stack-work/
+multtable.cabal
+*~
+test
+/*.csv
+article
