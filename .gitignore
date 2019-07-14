@@ -1,6 +1,7 @@
 .stack-work/
 multtable.cabal
 *~
+stack.yaml.lock
 test
 /*.csv
 article
