@@ -1,7 +1,6 @@
 module Main where
 
 import System.Environment (getArgs)
---import Text.Regex.Posix
 import Lib
 
 main :: IO ()

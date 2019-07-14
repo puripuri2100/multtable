@@ -8,8 +8,6 @@ module Lib
 import Data.List
 import Control.Monad
 
-folder :: String
-folder = "CSV/"
 
 returnVersion :: IO()
 returnVersion =
@@ -34,4 +32,4 @@ makeTable n =
     foldr (\x y -> x ++ "\n" ++ y) "" $ map (foldr (\x y -> x ++ ", " ++ y) "") mainList
 
 writeFileTable :: String -> IO()
-writeFileTable n = writeFile (folder ++ n ++ ".csv") (makeTable (read n))
+writeFileTable n = writeFile (n ++ ".csv") (makeTable (read n))
