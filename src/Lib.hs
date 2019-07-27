@@ -27,7 +27,7 @@ makeTable n =
   let yList = [1..(n - 1)] in
   let makeTuple n = map (\y -> (n, y, n * y)) yList in
   let convert i = (show (i `div` n)) ++ "-" ++ show (i `mod` n) in
-  let makeCell (x, y, xy) = convert x ++ " x " ++ convert y ++ " = " ++ convert xy in
+  let makeCell (x, y, xy) = show x ++ " x " ++ show y ++ " = " ++ convert xy in
   let mainList = map (map makeCell) $ map makeTuple xList in
     foldr (\x y -> x ++ "\n" ++ y) "" $ map (foldr (\x y -> x ++ ", " ++ y) "") mainList
 
